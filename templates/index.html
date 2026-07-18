@@ -1,0 +1,296 @@
+{% extends "base.html" %}
+
+{% block title %}
+AI Career Navigator
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <span class="badge bg-primary mb-3 px-3 py-2">
+
+                    AI Powered Career Platform
+
+                </span>
+
+                <h1 class="display-4 fw-bold mb-4">
+
+                    Find Your Dream Job
+
+                    <span class="text-primary">
+
+                        with AI
+
+                    </span>
+
+                </h1>
+
+                <p class="lead text-muted mb-4">
+
+                    Upload your resume and instantly discover
+                    the best matching jobs using AI-powered ATS
+                    analysis, resume parsing, and intelligent
+                    career insights.
+
+                </p>
+
+                <div class="d-flex gap-3">
+
+                    <a href="#upload"
+
+                       class="btn btn-primary btn-lg">
+
+                        Upload Resume
+
+                    </a>
+
+                    <a href="#features"
+
+                       class="btn btn-outline-primary btn-lg">
+
+                        Learn More
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="hero-card">
+
+                    <h3 class="mb-4">
+
+                        Upload Resume
+
+                    </h3>
+
+                    <form action="/upload"
+
+                          method="POST"
+
+                          enctype="multipart/form-data">
+
+                        <div class="upload-box">
+
+                            <i class="bi bi-cloud-arrow-up"></i>
+
+                            <h5>
+
+                                Drag & Drop Resume
+
+                            </h5>
+
+                            <p>
+
+                                or choose a PDF file
+
+                            </p>
+
+                            <input
+
+                                class="form-control"
+
+                                type="file"
+
+                                name="resume"
+
+                                accept=".pdf"
+
+                                required>
+
+                        </div>
+
+                        <button
+
+                            class="btn btn-primary btn-lg w-100 mt-4">
+
+                            Analyze Resume
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Features -->
+
+<section id="features" class="py-5">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<h2>
+
+Powerful Features
+
+</h2>
+
+<p class="text-muted">
+
+Everything you need for your job search.
+
+</p>
+
+</div>
+
+<div class="row">
+
+<div class="col-md-4 mb-4">
+
+<div class="feature-card">
+
+<i class="bi bi-file-earmark-text"></i>
+
+<h4>
+
+Resume Parsing
+
+</h4>
+
+<p>
+
+Extract skills automatically.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4 mb-4">
+
+<div class="feature-card">
+
+<i class="bi bi-bullseye"></i>
+
+<h4>
+
+ATS Matching
+
+</h4>
+
+<p>
+
+Calculate job match percentage.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4 mb-4">
+
+<div class="feature-card">
+
+<i class="bi bi-robot"></i>
+
+<h4>
+
+AI Insights
+
+</h4>
+
+<p>
+
+Resume improvement suggestions.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4 mb-4">
+
+<div class="feature-card">
+
+<i class="bi bi-briefcase"></i>
+
+<h4>
+
+Job Matching
+
+</h4>
+
+<p>
+
+Find suitable opportunities.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4 mb-4">
+
+<div class="feature-card">
+
+<i class="bi bi-graph-up"></i>
+
+<h4>
+
+Analytics
+
+</h4>
+
+<p>
+
+Track your career progress.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4 mb-4">
+
+<div class="feature-card">
+
+<i class="bi bi-lightning-charge"></i>
+
+<h4>
+
+Fast Results
+
+</h4>
+
+<p>
+
+Get analysis in seconds.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}

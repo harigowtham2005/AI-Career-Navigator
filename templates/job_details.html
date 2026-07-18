@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+
+{% block title %}
+Job Details
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="card shadow-lg p-5">
+
+        <h2 class="fw-bold">
+
+            {{ job.title }}
+
+        </h2>
+
+        <h5 class="text-muted">
+
+            {{ job.company }}
+
+        </h5>
+
+        <hr>
+
+        <div class="row mb-4">
+
+            <div class="col-md-3">
+
+                <strong>📍 Location</strong>
+
+                <p>{{ job.location }}</p>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <strong>💼 Employment</strong>
+
+                <p>{{ job.employment_type }}</p>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <strong>💰 Salary</strong>
+
+                <p>{{ job.salary or "Not Specified" }}</p>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <strong>⭐ ATS Match</strong>
+
+                <h4 class="text-success">
+
+                    {{ job.score }}%
+
+                </h4>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <h4>Description</h4>
+
+        <p>
+
+            {{ job.description|safe }}
+
+        </p>
+
+        <hr>
+
+        <h4>Required Skills</h4>
+
+        {% if job.skills %}
+
+            {% for skill in job.skills %}
+
+                <span class="badge bg-primary me-2 mb-2">
+
+                    {{ skill }}
+
+                </span>
+
+            {% endfor %}
+
+        {% else %}
+
+            <p>No skills specified.</p>
+
+        {% endif %}
+
+        <hr>
+
+        <h4>Matched Skills</h4>
+
+        {% if job.matched %}
+
+            {% for skill in job.matched %}
+
+                <span class="badge bg-success me-2 mb-2">
+
+                    {{ skill }}
+
+                </span>
+
+            {% endfor %}
+
+        {% else %}
+
+            <p>No matched skills.</p>
+
+        {% endif %}
+
+        <hr>
+
+        <h4>Missing Skills</h4>
+
+        {% if job.missing %}
+
+            {% for skill in job.missing %}
+
+                <span class="badge bg-danger me-2 mb-2">
+
+                    {{ skill }}
+
+                </span>
+
+            {% endfor %}
+
+        {% else %}
+
+            <p>No missing skills 🎉</p>
+
+        {% endif %}
+
+        <hr>
+
+        <div class="d-flex gap-3">
+
+            <a href="{{ job.apply_link }}"
+               target="_blank"
+               class="btn btn-success">
+
+                Apply Now
+
+            </a>
+
+            <a href="/job-matches"
+               class="btn btn-secondary">
+
+                Back to Jobs
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
