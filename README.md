@@ -183,9 +183,9 @@ AI_Career_Navigator/
 
 Computer Science Engineer | Python Developer | AI & Machine Learning Enthusiast
 
-GitHub: https://github.com/<your-username>
+GitHub: https://github.com/harigowtham2005
 
-LinkedIn: https://linkedin.com/in/<your-profile>
+LinkedIn: https://linkedin.com/in/harigowtham2005
 
 ---
 
